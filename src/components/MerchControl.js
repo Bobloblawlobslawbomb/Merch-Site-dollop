@@ -41,7 +41,6 @@ class MerchControl extends React.Component {
     }                         
 }
 
-
 // else {
 //   currentlyVisibleState = 
 //       <ShoppingCart shoppingCart={this.state.masterShoppingCart} />;
