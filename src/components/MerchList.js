@@ -4,18 +4,19 @@ import PropTypes from "prop-types";
 
 function MerchList(props) {
     return (
-        <React.Fragment>
+         <React.Fragment>
             <hr />
-            {props.merchlist.map((merch) => (
+            {props.merchList.map((merch) => 
                 <Merch
-                    names={merch.names}
+                    names={merch.name}
                     price={merch.price}
                     quantity={merch.quantity}
-                    picture={merch.picture}
+                    picture={<img src={`${merch.picture}`} alt="item"/>}
+                    
                     key={merch.id}
                 />
-            ))}
-        </React.Fragment>
+            )}
+         </React.Fragment>
     );
 }
 

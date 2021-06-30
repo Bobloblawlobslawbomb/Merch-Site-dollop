@@ -3,13 +3,13 @@ import NewMerchForm from "./NewMerchForm";
 import MerchList from "./MerchList";
 
 class MerchControl extends React.Component {
-    consturctor(props) {
+    constructor(props) {
         super(props);
         this.state = {
             formVisibleOnPage: false,
-            masterMerchList: [],
+            masterMerchList: []
         };
-        this.handleClicke = this.handleClicke.bind(this);
+        //this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick = () => {
@@ -31,15 +31,25 @@ class MerchControl extends React.Component {
         let buttonText = null;
         if (this.state.formVisibleOnPage) {
             currentlyVisibleState = 
-                <NewMerchForm onNewMerchCreation={this.handleAddingNewMerchToList} />;
+              <NewMerchForm onNewMerchCreation={this.handleAddingNewMerchToList} />;
             buttonText = "Go back to merch list";
         } else {
           currentlyVisibleState = 
             <MerchList merchList={this.state.masterMerchList} />;
             buttonText = "Add new merch";
-        } 
+        }
+        return (
+          <React.Fragment>
+            {currentlyVisibleState}
+            <button onClick={this.handleClick}>{buttonText}</button>
+          </React.Fragment>
+        );
     }                         
 }
+
+export default MerchControl;
+
+
 
 // else {
 //   currentlyVisibleState = 

@@ -24,11 +24,11 @@ function NewMerchForm(props) {
         <input
           type='number'
           name='quantity'
-          placeholder='Merch price' />
+          placeholder='Merch quantity' />
         <input
-          type='img'
+          type='text'  //changed from 'file'
           name='picture'
-          placeholder='Picture of merch' />
+          accept='image/*' />
           <hr/>
         <button type='submit'>Add New Merch</button>
         <hr/>

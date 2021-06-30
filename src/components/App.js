@@ -1,11 +1,14 @@
 import React from "react";
 import Header from "./Header";
+import MerchControl from "./MerchControl";
+import Footer from "./Footer";
 
 function App(){
   return (
     <React.Fragment>
       <Header />
-      <TicketControl />
+      <MerchControl />
+      <Footer />
     </React.Fragment>
   );
 }

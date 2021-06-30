@@ -1,8 +1,20 @@
 import React from "react";
 
-function Footer() {
+function Footer(props) {
+
+  const myFunkyFooterStyles = {
+    fontSize: '5'
+  }
+
   return (
-    <h3>Band Stuff</h3>
+    <div style={myFunkyFooterStyles}>
+      <p><small>Band Stuff</small></p>
+      <p><small>FAQs</small></p>
+      <p><small>Shipping and Returns</small></p>
+      <p><small>Sizing</small></p>
+      <p><small>Contact Us</small></p>
+      <p><small>Need a Store?</small></p>
+    </div>
   )
 }
 
